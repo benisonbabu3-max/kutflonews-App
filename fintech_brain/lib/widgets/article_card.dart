@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../models/article.dart';
-import '../services/ollama_service.dart';
+import '../services/ai_service.dart';
 import '../utils/theme.dart';
 
 // ─── DESIGN TOKEN — single source of truth for button radius ───────────────
@@ -271,7 +271,7 @@ class _AiChatPanel extends StatefulWidget {
 }
 
 class _AiChatPanelState extends State<_AiChatPanel> {
-  final _ai = OllamaService();
+  final _ai = AiService();
   final _ctrl = TextEditingController();
   final _scroll = ScrollController();
   final List<_ChatMsg> _msgs = [];
